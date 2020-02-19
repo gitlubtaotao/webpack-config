@@ -1,0 +1,37 @@
+{
+  "id": "1647278",
+  "name": "webpack-demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13083292",
+      "name": "澳门",
+      "font_class": "aomen",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "13083293",
+      "name": "巴黎",
+      "font_class": "bali",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "13084270",
+      "name": "玩具熊",
+      "font_class": "wanjuxiong",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "13083291",
+      "name": "北京",
+      "font_class": "beijing",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    }
+  ]
+}
