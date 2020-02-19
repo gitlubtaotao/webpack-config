@@ -8,13 +8,27 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 
+//sourceMap: 映射关系 最佳实践
+//{mode: 'production',devtool: 'cheap-module-source-map'}
+//{mode: 'development',devtool: 'cheap-module-eval-source-map'}
+
+
 module.exports = {
 	mode:'development',
+	// devtool: 'none',//关闭开发模式 sourceMap
+	devtool:  'cheap-module-eval-source-map',
+
  	entry: {
  		main: './src/index.js',
 
  		// 多入口文件
  		sub: './src/sub.js',
+ 	},
+
+ 	//webpack-dev-server
+ 	devServer:{
+ 		contentBase: './dist',
+ 		open: true //自动打开游览器
  	},
  	module:{
  		rules:[
@@ -73,8 +87,8 @@ module.exports = {
  	output: {
    		//filename: 'bundle.js'，
    		filename: '[name].js',
-   		publicPath: 'http://cdn-webpacker.com', //生成url
-   		// publicPath: '/assets/'， //生成一个新文件夹
+   		//publicPath: 'http://cdn-webpacker.com', //生成url
+   		// publicPath: '/assets/' //生成一个新文件夹
 
    	},
    	plugins: [
