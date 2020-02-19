@@ -34,3 +34,7 @@
 .iconbeijing:before {
   content: "\e61c";
 }
+
+div:nth-of-type(odd){
+  background: red;
+}
