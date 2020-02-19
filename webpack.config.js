@@ -28,7 +28,11 @@ module.exports = {
  	//webpack-dev-server
  	devServer:{
  		contentBase: './dist',
- 		open: true //自动打开游览器
+ 		open: true, //自动打开游览器
+
+ 		proxy: {
+ 			'/api': "http: //localhost: 3000"
+ 		}
  	},
  	module:{
  		rules:[
