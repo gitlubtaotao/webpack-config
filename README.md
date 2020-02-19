@@ -1,2 +1,2 @@
 # webpack-config
-webpack deep learning
+webpack deep learning and config
