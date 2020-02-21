@@ -15,29 +15,13 @@ const webpack = require('webpack');
 
 
 module.exports = {
-	mode:'development',
+	mode:'production',
 	// devtool: 'none',//关闭开发模式 sourceMap
-	devtool:  'cheap-module-eval-source-map',
-
+	devtool:  'cheap-module-source-map',
  	entry: {
  		main: './src/index.js',
-
  		// 多入口文件
  		sub: './src/sub.js',
- 	},
-
- 	//webpack-dev-server
- 	devServer:{
- 		contentBase: './dist',
- 		open: false, //自动打开游览器
- 		port: 8080, 		
- 		proxy: {
- 			'/api': "http: //localhost: 3000"
- 		},
- 		
- 		//热模块更新
- 		hot: true,
- 		hotOnly: true
  	},
  	module:{
  		rules:[
@@ -135,7 +119,7 @@ module.exports = {
 	   		title: 'plugins'
 	   	}),
 	   	//热模块更新
-	   	new webpack.HotModuleReplacementPlugin(),
+	   	// new webpack.HotModuleReplacementPlugin(),
    	 
    	]
 }

@@ -1,5 +1,6 @@
 {
   "name": "webpack-demo",
+  "sideEffects": false, 
   "version": "1.0.0",
   "description": "webpack is study",
   "main": "index.js",
@@ -7,7 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server"
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "xtt691373656@qq.com",
   "license": "ISC",

@@ -20,6 +20,13 @@ btn.onclick = function () {
 }
 
 
+//  Tree Shaking  ES Module
+
+import {add} from './math.js';
+
+add(1,2);
+
+
 
 
 
