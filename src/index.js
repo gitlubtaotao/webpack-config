@@ -1,4 +1,4 @@
-import "@babel/polyfill";
+
 import Data from './data.jpg';
 
 import './index.css';

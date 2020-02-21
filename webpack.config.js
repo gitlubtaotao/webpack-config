@@ -29,7 +29,7 @@ module.exports = {
  	//webpack-dev-server
  	devServer:{
  		contentBase: './dist',
- 		open: true, //自动打开游览器
+ 		open: false, //自动打开游览器
  		port: 8080, 		
  		proxy: {
  			'/api': "http: //localhost: 3000"
@@ -97,13 +97,28 @@ module.exports = {
  			test: /\.js$/, 
  			exclude: /node_modules/, 
  			loader: "babel-loader",
- 			options:{
- 				"presets": [["@babel/preset-env",
- 					{
- 					useBuiltIns: "usage"
- 					}
- 				]]
- 			}
+ 			// options:{
+
+ 			// 	// @babel/polyfill
+ 			// 	// "presets": [["@babel/preset-env",
+ 			// 	// 	{
+ 			// 	// 	useBuiltIns: "usage",
+ 			// 	// 	targets:{
+ 			// 	// 		chrome: "67"
+ 			// 	// 	}}
+ 			// 	// ]]
+ 			// 	//A plugin that enables the re-use of Babel's injected helper code to save on codesize 
+
+ 			// 	"plugins": [["@babel/plugin-transform-runtime",{
+ 			// 		"absoluteRuntime": false,
+    		//    	"corejs": 2,
+    		//     	"helpers": true,
+    		//      "regenerator": true,
+			//      "useESModules": false,
+			//      "version": "7.0.0-beta.0"
+ 			// 	}]]
+ 			
+ 			// }
  		}]
  	},
  	output: {
@@ -114,7 +129,7 @@ module.exports = {
 
    	},
    	plugins: [
-   	 	new CleanWebpackPlugin(),
+   	 	new CleanWebpackPlugin(), //清空上次打包的文件
 	   	new HtmlWebpackPlugin({
 	   		template: 'src/index.html', //指定生成html文件饿模版
 	   		title: 'plugins'
