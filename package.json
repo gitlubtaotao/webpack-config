@@ -1,6 +1,6 @@
 {
   "name": "webpack-demo",
-  "sideEffects": false, 
+  "sideEffects": false,
   "version": "1.0.0",
   "description": "webpack is study",
   "main": "index.js",
@@ -8,8 +8,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js"
   },
   "author": "xtt691373656@qq.com",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "vue-loader": "^15.9.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   }
 }
