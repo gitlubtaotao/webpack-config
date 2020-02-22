@@ -1,4 +1,13 @@
 const path = require('path');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //自动生成html文件
+
+//A webpack plugin to remove your build folder(s) before building 
+// https://github.com/johnagan/clean-webpack-plugin 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+
+const webpack = require('webpack');
 module.exports = {
 	entry: {
  		main: './src/index.js',
@@ -87,6 +96,19 @@ module.exports = {
  			// }
  		}]
  	},
+
+  plugins: [
+      new CleanWebpackPlugin({}), //清空上次打包的文件
+      new HtmlWebpackPlugin({
+        template: 'src/index.html', //指定生成html文件饿模版
+        title: 'plugins'
+      }),
+    ],
+  optimization:{
+      splitChunks:{
+        chunks: 'all'
+      }
+  },  
  	output: {
    		//filename: 'bundle.js'，
    		filename: '[name].js',
