@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
 	entry: {
  		main: './src/index.js',
@@ -89,6 +90,7 @@ module.exports = {
  	output: {
    		//filename: 'bundle.js'，
    		filename: '[name].js',
+      path: path.resolve(__dirname,'../dist')
    		//publicPath: 'http://cdn-webpacker.com', //生成url
    		// publicPath: '/assets/' //生成一个新文件夹
 
